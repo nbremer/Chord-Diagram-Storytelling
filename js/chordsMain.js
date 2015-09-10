@@ -27,18 +27,18 @@ var fill = d3.scale.ordinal()
 /////////////// Initiate Chord Diagram /////////////////////
 //////////////////////////////////////////////////////////*/
 
-var width = 650,
-    height = 600,
-	hPad = 20
+var margin = {top: 20, right: 25, bottom: 20, left: 25},
+	width = 700 - margin.left - margin.right,
+    height = 650 - margin.top - margin.bottom,
     innerRadius = Math.min(width, height) * .39,
     outerRadius = innerRadius * 1.04;
 
 /*Initiate the SVG*/
 var svg = d3.select("#chart").append("svg:svg")
-    .attr("width", width+50)
-    .attr("height", height+20)
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
 	.append("svg:g")
-    .attr("transform", "translate(" + width / 2 + "," + (height / 2 + hPad) + ")");
+    .attr("transform", "translate(" + (margin.left + width / 2) + "," + (margin.top + height / 2) + ")");
 
 	
 var chord = d3.layout.chord()

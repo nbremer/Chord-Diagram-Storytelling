@@ -5,12 +5,14 @@
 		  font-family: 'Raleway', sans-serif;
 		  /*font-family: Oswald;*/
 		  /*font-family: "Helvetica Neue", Helvetica;*/
+		  text-align: center;
 		}
 
 		#clickerWrapper {
 		  top: 0;
 		  z-index: 1;
 		  display: block;
+		  margin: 0 auto;
 		  position: relative;
 		  width: 640px;
 		  /*padding-top: 5px;*/
@@ -47,6 +49,8 @@
 		#buttonWrapper{
 		  z-index: 1;
 		  display: block;
+		  display: block;
+		  margin: 0 auto;
 		  font-family: Oswald;
 		  font-size: 14px;
 		  font-weight: 300;
